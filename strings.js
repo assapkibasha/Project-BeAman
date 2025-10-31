@@ -36,3 +36,15 @@
 
 let j = 'items('+ (1+1) +'):               '+ '$' + (2095 + 799)/100;
 console.log(j);
+//there are three wys to create strings in javascript
+//1 '', 2 "" , and ` ` [escape charachters 3, /', 4. /n new line, /"]
+//eg 1 a = 'hello' ,1 a = 'I/'am',  2. a = "hello", 3, 
+
+// using string interpolation
+
+let text = `Items (${1+1})   $${(2095+799) / 100}`
+console.log(text)
+//an other thing on temprate strings
+let k = `items
+in`;
+console.log(k)
