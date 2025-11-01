@@ -17,6 +17,20 @@ console.log(`Cars in the slot are:${parkkingSlot.length}`)
 
 //function to check car exist and remove car
 
+function makeCarVip(carNumber){
+    const vipCar = parkkingSlot.find(c => c.carNumber === carNumber);
+    if(!vipCar){
+        console.log(`Car ${carNumber} is Not found`);
+        return;
+    }
+    vipCar.vip = true;
+    console.log(`car ${carNumber} is now a Vip`);
+}
+makeCarVip('RAC 123')
+
+
+//function to exit the car
+
 function carExit(carNumber){
     const index = parkkingSlot.findIndex(c => c.carNumber === carNumber);
     
@@ -36,7 +50,10 @@ function carExit(carNumber){
     //check time to determine the cost
     if(hours <= 1){
         count = 1000
-    }else{
+    }
+    else if(car.vipCar){
+        count = 1000 + Math.ceil((hours - 1) * 500) /0.5
+    }else {
         count = 1000 + Math.ceil((hours - 1) * 500);
     }
     parkkingSlot.splice(index, 1);
@@ -44,3 +61,4 @@ function carExit(carNumber){
 
 }
 carExit('RAC 123')
+
