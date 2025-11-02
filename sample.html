@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add To Cart</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .selectProducts{
+            display: grid;
+            margin: 10px;
+            padding: auto;
+        }
+        .productCost{
+            padding: 30px;
+            background-color: teal;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="Products">
+        <p>Choose Products</p>
+        <div class="selectProducts">
+            <button onclick="
+            cost += 100;
+            document.getElementById('output').innerText = `Rwf ${cost}`;
+                ">Product 1 Cost: 100 Rwf</button>
+
+            <button onclick="
+             cost += 100;
+            document.getElementById('output').innerText = `Rwf ${cost}`;
+            ">Product 2 Cost: 100 Rwf</button>
+
+            <button onclick="
+             cost += 100;
+            document.getElementById('output').innerText = `Rwf ${cost}`;
+            ">Product 3 Cost: 100 Rwf</button>
+
+            <button onclick="
+             cost += 100;
+            document.getElementById('output').innerText = `Rwf ${cost}`;
+            ">Product 4 Cost: 100 Rwf</button>
+            <button onclick="
+             cost = 0;
+            document.getElementById('output').innerText = `Rwf ${cost}`;
+            ">Rest Cart</button>
+        </div>
+        <p>You are Going to pay</p>
+        <div class="productCost">
+            <p id="output"></p>
+        </div>
+    </div>
+
+    <script>
+        let cost = 0;
+    </script>
+</body>
+</html>
