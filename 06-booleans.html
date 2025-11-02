@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans</title>
+    <style>
+    body{
+        height: 100%;
+        justify-content: center;
+        margin-top: 100px;
+        display: flex;
+        align-items: center; 
+        background-color: aqua;  
+        position: center;  
+    }
+    .form{
+        margin: 3px;
+        justify-content: center;
+    }
+    button{
+        display: flex;
+        margin: auto;
+        margin-top: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #age{
+        padding: 10px;
+        border: none;
+    }
+    .results-div{
+        background-color: white;
+        padding: 20px;
+        border-color: chartreuse;
+        border-radius: 10px;
+
+
+    }
+</style>
+</head>
+<body>
+   <div class="form">
+        <label for="Age">Age:</label>
+        <input type="text" id ="age">
+
+        <label for="button"> </label><br>
+        <button id="getResultButton">Submit</button>
+
+        <p>The Results based on your age:</p>
+
+        <div class="results-div">
+        <label for="Result"></label> 
+        <p id="output"> </p>
+    </div>
+    </div>
+    <script>
+        document.getElementById('getResultButton')
+        .addEventListener('click', function(){
+            const input = document.getElementById('age').value;
+            if(input <21){
+                document.getElementById('output').innerText = `you can not drive becouse you are young ${input}`;
+            }else{
+                document.getElementById('output').innerText = `you can drive because you are ${input}`;
+            }
+        })
+    </script>
+   
+</body>
+</html>
